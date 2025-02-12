@@ -1,0 +1,16 @@
+
+a1, a2, a3, a4 = map(int, input().split())
+
+# Read the string describing the sequence of squares
+s = input().strip()
+
+# Map each strip number to its corresponding calorie value
+calorie_map = {'1': a1, '2': a2, '3': a3, '4': a4}
+
+# Calculate the total calories
+total_calories = 0
+for char in s:
+    total_calories += calorie_map[char]
+
+# Output the total calories
+print(total_calories)
