@@ -1,0 +1,11 @@
+k, r = map(int, input().split())  # Input: price of one shovel and the r-burle coin
+n = 1  # Start with 1 shovel
+
+while True:
+    total_cost = n * k  # Total cost for n shovels
+    # Check if total_cost ends with r or 0
+    if total_cost % 10 == r or total_cost % 10 == 0:
+        break
+    n += 1  # Increment the number of shovels
+
+print(n)
