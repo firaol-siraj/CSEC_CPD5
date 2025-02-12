@@ -1,0 +1,15 @@
+# Read the stone sequence and instructions
+s = input().strip()  # Stone sequence
+t = input().strip()  # Instructions
+
+# Initialize Liss's position (1-based)
+position = 1
+
+# Iterate through each instruction
+for instruction in t:
+    # Check if the instruction matches the current stone's color
+    if s[position - 1] == instruction:
+        position += 1  # Move forward one stone
+
+# Output the final position
+print(position)
