@@ -1,0 +1,16 @@
+s = input().strip()  # Input string
+current = 'a'  # Initial position of the pointer
+total_rotations = 0  # Total number of rotations
+
+for char in s:
+    # Calculate clockwise and counterclockwise distances
+    clockwise = (ord(char) - ord(current)) % 26
+    counterclockwise = (ord(current) - ord(char)) % 26
+    
+    # Choose the minimum distance
+    total_rotations += min(clockwise, counterclockwise)
+    
+    # Update the current position
+    current = char
+
+print(total_rotations)
