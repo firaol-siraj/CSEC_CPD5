@@ -1,0 +1,21 @@
+from math import gcd
+
+# Read Yakko's and Wakko's die rolls
+Y, W = map(int, input().split())
+
+# Determine the maximum roll
+max_roll = max(Y, W)
+
+# Calculate the number of favorable outcomes for Dot
+favorable = 7 - max_roll
+
+# Total possible outcomes
+total = 6
+
+# Simplify the fraction
+common_divisor = gcd(favorable, total)
+numerator = favorable // common_divisor
+denominator = total // common_divisor
+
+# Output the result in the required format
+print(f"{numerator}/{denominator}")
